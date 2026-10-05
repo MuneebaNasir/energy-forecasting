@@ -125,6 +125,10 @@ docs/                  figures · synthese_fr.md
 `databricks bundle deploy -t dev`. Hand-off to Dataiku: `05_export_for_dataiku`, or point a
 Dataiku Databricks connection at `workspace.energy.gold_features`.
 
+**Verified run in Databricks** (Free Edition, serverless; notebooks 00–04, then the bundle job
+bronze → silver → gold in 15 min): 1,543,872 bronze rows · 6.39 % of readings flagged in silver ·
+76 / 88 meters kept · 1,333,344 gold rows. Identical to the local run.
+
 **Dataiku** (built and run on Dataiku DSS 15.0.2, Free Edition): import
 [`dataiku/export/ENERGY_FORECAST.zip`](dataiku/export/ENERGY_FORECAST.zip) (*+ New project → Import*),
 upload the four CSVs from `scripts/export_for_dataiku.py`, then build the Flow. Or rebuild the whole

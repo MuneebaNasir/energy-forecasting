@@ -3,6 +3,14 @@
 bundle:
   name: energy-forecasting
 
+sync:   # the job only needs the notebooks and the shared package
+  exclude:
+    - dataiku/**
+    - docs/**
+    - tests/**
+    - scripts/**
+    - .github/**
+
 resources:
   jobs:
     energy_pipeline:
